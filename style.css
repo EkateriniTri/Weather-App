@@ -46,3 +46,8 @@ ul {
   border-radius: 10px;
   max-width: 900px;
 }
+.small {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
