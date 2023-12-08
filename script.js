@@ -30,10 +30,19 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
+    response.data.wind.speed * 3.6
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#high").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector("#low").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector("#feels").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
 }
 
 function searchCity(city) {
@@ -81,4 +90,4 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Tokyo");
+searchCity("Vienna");

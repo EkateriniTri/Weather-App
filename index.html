@@ -11,47 +11,57 @@
     rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
     crossorigin="anonymous"  />
-    <title>weather-app</title>
-    <link rel="stylesheet" href="style.css" /> 
-  </head>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css" /> 
+     <meta
+      name="description"
+      content="Know the daily weather in various cities"/>
+     <title>Daily Weather in Vienna</title>
+</head>
 <body>
   <div class="container">
     <div class="weather-app">
       <form class="search-form" id="search-form">
         <div class="row">
-          <div class="col-6">
+          <div class="col-sm-6">
             <input
               type="search"
               placeholder="Type a city..."
               autofocus="on"
               autocomplete="off"
               id="city-input"
-              class="form-control"
+              class="form-control mb-5 mt-5"
              />
           </div>
-          <div class="col-3">
+          <div class="col-sm-3">
             <input
               type="submit"
               value="Search"
-              class="form-control btn btn-primary shadow-sm w-100"
+              class="form-control btn btn-primary shadow-sm w-100 mb-5 mt-5"
               id="searchCityButton" />
           </div>
-           <div class="col-3">
+           <div class="col-sm-3">
           <button
-          class="btn btn-success w-100"
+          class="btn btn-success w-100 mb-5 mt-5"
           id="current-location-button"> 
           Current Location
            </button>
         </div>
         </div>
       </form>
-    </br>
       <h1 id="city"></h1>
       <h2 id="date"></h2>
       <ul>
         <li id="description"></li>
       </ul>
+      <div class="temp">
+        <span  id="high"> </span>°
+        /
+        <span  id="low"></span>°
+      </div>
             <div class="row">
           <div class="col-6">
             <div class="clearfix">
@@ -63,17 +73,18 @@
         </div>
       <div class="col-6">
         <ul>
+           <li>Feels like:<span id="feels"></span> °C </li>
           <li>Humidity: <span id="humidity"></span> % </li> 
           <li>Wind:<span id="wind"></span> km/h </li> 
         </ul>
       </div>
     </div>  
    </div>
-    </div>
-  </div>
   <small>
   <a href="https://github.com/EkateriniTri/Weather-App" >Open-source code</a>, by Katerina Tri
   </small>
+    </div>
+  </div>
 </div>  
         <script src="script.js"></script>
     </body>
